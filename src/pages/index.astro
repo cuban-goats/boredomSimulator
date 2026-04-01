@@ -2,11 +2,17 @@
 import '../styles/style.css';
 import '../styles/navbar.css';
 import '../script/script.ts';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<script>
+const btn = document.getElementById("box") as HTMLDivElement;
+const counterText = document.getElementById("counterText");
+
+btn?.addEventListener("click", (event: MouseEvent) => {
+  console.log("Clicked via event listener");
+});
+
+</script>
 <header>
   <nav>
     <ul>
@@ -51,14 +57,3 @@ import '../script/script.ts';
   <!--   <li></li> -->
   <!-- </ul> -->
 </footer>
-
-<script>
-  const counter = 0;
-  const btn = document.getElementById("box") as HTMLDivElement;
-  const counterText = document.getElementById("counterText");
-
-  btn?.addEventListener("click", (event: MouseEvent) => {
-    console.log("Clicked via event listener");
-  });
-
-</script>
