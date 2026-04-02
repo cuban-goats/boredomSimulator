@@ -41,14 +41,17 @@ body {
 .slot {
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   flex-direction: column;
   gap: 14vh;
-  top: 6vh;
+  top: 6.5vh;
   width: 30vw;
   height: 94vh;
   box-shadow: 0px 10px 10px 0px white;
+}
+
+.clicker {
+  justify-content: center;
 }
 
 .boxWrapper {

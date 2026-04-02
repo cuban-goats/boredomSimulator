@@ -1,39 +1,47 @@
-/*
-* upgrade dropdown
-* */
-.dropBtn {
-  background-color: transparent;
+.shop {
+  gap: 0vh;
+}
+
+.shopText {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  border-bottom: 1px solid white;
+}
+
+.shopUpgradeImage {
+  max-width: 6vh;
+  max-height: 6vh;
+  border-radius: 100%;
+  padding-left: 1vh;
+}
+
+.upgradeWrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.4vw;
+
+  border-bottom: 1px solid white;
+
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.costWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
   color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
 }
 
-.dropDown {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+.upgradeWrapper:hover {
+  box-shadow: 0px 10px 10px 0px white;
 }
 
-.dropDownContent {
-  display: block;
-  transition: display 1s ease;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 0px 10px 0px white;
-  z-index: 1;
-}
-
-.dropDownContent a {
-  color: black;
-  text-decoration: none;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: block;
-}
-
-.dropDownContent a:hover {
-  background-color: lightgray;
-  transition: background-color 0.3s ease-in-out;
-}

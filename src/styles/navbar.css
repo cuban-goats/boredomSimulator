@@ -30,6 +30,10 @@ nav ul {
   gap: 2em;
 }
 
+nav ul li {
+  padding-bottom: 2vh;
+}
+
 nav ul li:hover {
   box-shadow: 0px 10px 10px 0px white;
   text-shadow: 0px 10px 10px 0px white;

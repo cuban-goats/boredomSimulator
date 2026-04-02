@@ -3,6 +3,8 @@ import '../styles/style.css';
 import '../styles/navbar.css';
 import '../styles/shop.css';
 import '../styles/scrollbar.css';
+import '../styles/footer.css';
+
 import '../script/script.ts';
 ---
 
@@ -15,14 +17,13 @@ btn?.addEventListener("click", (event: MouseEvent) => {
 });
 
 </script>
+
 <header>
   <nav>
     <ul>
       <li class="gameTitle"><br>Boredom Simulator</li>
-      <li><br>About</li>
-      <li>
-        <button class="dropBtn">Upgrades</button>
-      </li>
+      <li><br>Achievements</li>
+      <li><br>Upgrades</li>
     </ul>
   </nav>
 </header>
@@ -30,9 +31,23 @@ btn?.addEventListener("click", (event: MouseEvent) => {
   <slot />
 </div> <!-- end of .game -->
 <footer>
-  <!-- <ul> -->
-  <!--   <li></li> -->
-  <!--   <li></li> -->
-  <!--   <li></li> -->
-  <!-- </ul> -->
+  <div class="footerWrapper">
+    <br>
+    <br>
+    <div class="legal">
+      <a href="">Legal</a>
+    </div>
+    <div class="about">
+      <a href="">About</a>
+    </div>
+    <div class="contact">
+      <a href="">Contact</a>
+    </div>
+    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis vel, eius quibusdam, sit deserunt cumque commodi explicabo minus, eos ipsum laborum sunt amet facere debitis facilis maxime magni obcaecati consequatur!</span>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </footer>

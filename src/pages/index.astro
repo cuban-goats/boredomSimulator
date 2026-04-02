@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import { Image } from 'astro:assets';
+import myImage from '../assets/cat.png';
 ---
 
 <BaseLayout>
@@ -7,7 +9,7 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     <p>upgrade visualization</p>
   </div>
 
-  <div class="slot">
+  <div class="slot clicker">
     <div id="textBox" class="textBox">
       <span class="counterText">Click !!!</span>
       <span class="boredomCounter">Boredom counter: </span>
@@ -26,8 +28,39 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     </div>
   </div>
 
-  <div class="slot">
-    <p>shop</p>
+  <div class="slot shop">
+    <span class="shopText">Shop</span>
+    <div class="upgradeWrapper">
+      <Image src={myImage} alt="" class="shopUpgradeImage" />
+      <span class="upgradeName">powerClick</span>
+      <div class="costWrapper">
+        <div>
+          <span class="cost">cost:</span>
+          <span>1</span>
+        </div>
+        <div>
+          <span>owned:</span>
+          <span>0</span>
+        </div>
+      </div>
+    </div>
+    <div class="upgradeWrapper">
+      <Image src={myImage} alt="" class="shopUpgradeImage" />
+      <span class="upgradeName">autoClick</span>
+      <div class="costWrapper">
+        <div>
+          <span class="cost">cost:</span>
+          <span>10</span>
+        </div>
+        <div>
+          <span>owned</span>
+          <span>0</span>
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 
 </BaseLayout>
