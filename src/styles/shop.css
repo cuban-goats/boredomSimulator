@@ -1,0 +1,47 @@
+.shop {
+  gap: 0vh;
+}
+
+.shopText {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  border-bottom: 1px solid white;
+}
+
+.shopUpgradeImage {
+  max-width: 6vh;
+  max-height: 6vh;
+  border-radius: 100%;
+  padding-left: 1vh;
+}
+
+.upgradeWrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.4vw;
+
+  border-bottom: 1px solid white;
+
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.costWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  color: white;
+}
+
+.upgradeWrapper:hover {
+  box-shadow: 0px 10px 10px 0px white;
+}
+

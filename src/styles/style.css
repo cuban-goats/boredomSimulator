@@ -33,18 +33,33 @@ body {
   margin: 0 0 0 0;
 }
 
-.flexbox {
-  gap: 5rem;
+.game {
+  display: flex;
+  gap: 5vw;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  gap: 14vh;
+  top: 6.5vh;
+  width: 30vw;
+  height: 94vh;
+  box-shadow: 0px 10px 10px 0px white;
+}
+
+.clicker {
+  justify-content: center;
 }
 
 .boxWrapper {
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   position: absolute;
-  top: 40vh;
-  gap: 5rem;
-  flex-wrap: wrap;
 }
 
 .box {
@@ -54,6 +69,54 @@ body {
   animation: var(--box-animation);
   box-shadow: 0px 0px 30px rgb(101, 255, 255);
 }
+
+.textBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  gap: 2vh;
+  position: absolute;
+  top: 14vh;
+  width: 100%;
+}
+
+span.counter {
+  color: white;
+  font-size: 200%;
+  text-shadow: 0px 0px 30px white;
+}
+
+span.counterText {
+  position: absolute;
+  top: -6vh;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 2em;
+  text-shadow: 0px 0px 30px white;
+  animation: textPulse 1s linear 0s infinite;
+}
+span.boredomCounter {
+  color: white;
+}
+
+.boxTwo {
+  background-color: white;
+  width: 20vh;
+  height: 20vh;
+  animation: greenGlow 3s linear 0s infinite, rotateBackwards 2s linear 0s infinite;
+  box-shadow: 0px 0px 30px rgb(145, 253, 22);
+}
+
+.boxThree {
+  background-color: white;
+  width: 20vh;
+  height: 20vh;
+  animation: var(--animation);
+  box-shadow: var(--box-three-shadow);
+}
+
 
 .box:hover {
   animation: greenGlow 3s linear 0s infinite, rotateBackwards 2s linear 0s infinite;
@@ -65,35 +128,15 @@ body {
   box-shadow: 0px 0px 30px rgb(251, 112, 108);
 }
 
-
-.boxTwo {
-  background-color: white;
-  width: 20vh;
-  height: 20vh;
-  animation: greenGlow 3s linear 0s infinite, rotateBackwards 2s linear 0s infinite;
-  box-shadow: 0px 0px 30px rgb(145, 253, 22);
-}
-
 .boxTwo:hover {
   animation: blueGlow 3s linear 0s infinite, rotateForwards 2s linear 0s infinite;
   box-shadow: 0px 0px 30px rgb(101, 255, 255);
 }
 
-
 .boxTwo:active {
   animation: redGlow 3s linear 0s infinite, rotateBackwards 2s linear 0s infinite, circle 2s linear 0s infinite;
   box-shadow: 0px 0px 30px rgb(251, 112, 108);
 }
-
-
-.boxThree {
-  background-color: white;
-  width: 20vh;
-  height: 20vh;
-  animation: var(--animation);
-  box-shadow: var(--box-three-shadow);
-}
-
 @keyframes blueGlow {
   0% {
     background-color: rgb(109, 255, 255);
@@ -204,35 +247,6 @@ body {
   100% {
     border-radius: 0%;
   }
-}
-
-.textBox {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  position: absolute;
-  top: 16vh;
-  width: 100%;
-  height: 100%;
-  gap: 2rem;
-}
-
-span.counter {
-  position: absolute;
-  top: 10vh;
-  color: white;
-  font-size: 200%;
-  text-shadow: 0px 0px 30px white;
-}
-
-span.counterText {
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 2em;
-  text-shadow: 0px 0px 30px white;
-  animation: textPulse 1s linear 0s infinite;
 }
 
 @keyframes pulse {
