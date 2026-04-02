@@ -1,59 +1,33 @@
 ---
-import '../styles/style.css';
-import '../styles/navbar.css';
-import '../script/script.ts';
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<script>
-const btn = document.getElementById("box") as HTMLDivElement;
-const counterText = document.getElementById("counterText");
-
-btn?.addEventListener("click", (event: MouseEvent) => {
-  console.log("Clicked via event listener");
-});
-
-</script>
-<header>
-  <nav>
-    <ul>
-      <li class="gameTitle"><br>Boredom Simulator</li>
-      <li><br>About</li>
-      <li>
-        <div class="dropDown">
-          <button class="dropBtn">Upgrades</button>
-          <div class="dropDownContent">
-              <span id="autoClick">autoclick</span>
-              <span>powerclick</span>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </nav>
-</header>
-<div class="flexbox">
-  <div id="textBox" class="textBox" onclick="">
-    <span class="counterText">Click !!!</span>
-    <span id="counterText" class="counter">0</span>
+<BaseLayout>
+  <div class="slot">
+    <p>upgrade visualization</p>
   </div>
-  <div class="boxWrapper">
-    <div id="box" class="box">
-      <p></p>
+
+  <div class="slot">
+    <div id="textBox" class="textBox">
+      <span class="counterText">Click !!!</span>
+      <span class="boredomCounter">Boredom counter: </span>
+      <span id="counterNumber" class="counter">0</span>
     </div>
-    <div id="boxTwo"class="boxTwo">
-      <p></p>
-    </div>
-    <div id="boxThree"class="boxThree">
-      <p></p>
+    <div class="boxWrapper">
+      <div id="box" class="box">
+        <p></p>
+      </div>
+      <!-- <div id="boxTwo"class="boxTwo"> -->
+      <!--   <p></p> -->
+      <!-- </div> -->
+      <!-- <div id="boxThree"class="boxThree"> -->
+      <!--   <p></p> -->
+      <!-- </div> -->
     </div>
   </div>
-</div>
-<section class="upgradeVisualization">
 
-</section>
-<footer>
-  <!-- <ul> -->
-  <!--   <li></li> -->
-  <!--   <li></li> -->
-  <!--   <li></li> -->
-  <!-- </ul> -->
-</footer>
+  <div class="slot">
+    <p>shop</p>
+  </div>
+
+</BaseLayout>

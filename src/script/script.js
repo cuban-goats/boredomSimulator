@@ -2,7 +2,7 @@
 let counter = 0;
 const textBox = document.getElementById('textBox');
 textBox.addEventListener('click', function() {
-  document.getElementById("counterText").innerHTML = counter; // change to Player score
+  document.getElementById("counterNumber").innerHTML = counter; // change to Player score
 });
 
 const box = document.getElementById('box');
@@ -38,7 +38,7 @@ class Player {
 
   click() {
     this.score = this.score + 1 * this.clickingMultiplier;
-    document.getElementById("counterText").innerHTML = this.score;
+    document.getElementById("counterNumber").innerHTML = this.score;
   }
 }
 
