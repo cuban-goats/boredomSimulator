@@ -2,7 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import { Image } from 'astro:assets';
 import myImage from '../assets/cat.png';
+import { Game } from "../script/Game";
 ---
+
+<script>
+import { Game } from "../script/Game.ts"
+import '../script/Player.ts';
+import { Player } from '../script/Player.ts';
+import '../script/Stats.ts';
+import { Stats } from '../script/Stats.ts';
+import '../script/Upgrade.ts';
+import { Upgrade } from '../script/Upgrade.ts';
+
+
+const playerName = "PlayerName";
+
+const game = new Game(playerName);
+
+const btn = document.getElementById("box") as HTMLDivElement;
+let counterText = document.getElementById("counterNumber") as HTMLSpanElement;
+
+
+btn?.addEventListener("click", (event: MouseEvent) => {
+  console.log("Clicked via event listener");
+  game.player.addClickToScore();
+  counterText.innerText = game.player.stats.getScore().toString();
+});
+</script>
 
 <BaseLayout>
   <div class="slot">
